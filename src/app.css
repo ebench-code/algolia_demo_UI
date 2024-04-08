@@ -41,9 +41,12 @@
   flex: 1;
 }
 
-.search-panel__results {
-  flex: 3;
+body.search-panel__results {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Adjust the gap as needed */
 }
+
 
 .ais-Highlight-highlighted {
   color: inherit;
@@ -60,8 +63,12 @@
 }
 
 .ais-Hits-item article {
-  display: flex;
+  /* Removed 'display: flex;' to allow grid styling to take effect */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow for better visual separation */
+  padding: 16px; /* Optional: adds some internal spacing */
+  background-color: #fff; /* Optional: sets a background color for the hit items */
 }
+
 
 .ais-Hits-item img {
   max-height: 125px;
@@ -108,4 +115,11 @@
 .product-image-wrapper:hover .product-image {
   transform: scale(2.0);
 }
+
+.search-panel .ais-Results-list {
+  margin-left: 20px;
+}
+
+
+   
 
