@@ -12,6 +12,7 @@ pull https://github.com/ebench-code/productos_indexer
 in your code editor update the following:
 const index = client.initIndex('products-import'); // use a name that you wish for your index. Recommend 'products-import' as this is used in the UI Demo code.
 update the APP ID and ADMIN KEY using your own APP ID and ADMIN KEY. You can set this at the shell in your .env file. Use the same names as are shown in index.js
+
 Step 3
 Run index.js
 ```sh
