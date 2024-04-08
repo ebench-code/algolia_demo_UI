@@ -24,26 +24,29 @@ search.addWidgets([
       item: (hit, { html, components, sendEvent }) => html`
       <article style="text-align: left;">
       <div class="product-image-wrapper">
-      <img src="${hit.image}" alt="${hit.name}" class="product-image" />
-    </div>
-    
+        <img src="${hit.image}" alt="${hit.name}" class="product-image" />
+      </div>
+      
       <div style="margin-top: 10px">
-        <div>${components.Highlight({ hit, attribute: 'name' })}</div>
+        <div>
+          <a href="${hit.url}" target="_blank">${components.Highlight({ hit, attribute: 'name' })}</a>
+        </div>
         <div style="margin-top: 5px;">$${hit.price}</div>
         <div style="margin-top: 5px;"><strong>Popularity:</strong> ${hit.popularity}</div>   
         <div style="margin-top: 5px;"><strong>Rating:</strong> ${hit.rating}</div>
         <div style="margin-top: 5px;">
-            <button
-              onclick="${() => sendEvent('click', hit, 'my-click-event')}"
-            >
-              Add to Cart
-            </button>
-            </div>    
+          <button
+            onclick="${() => sendEvent('click', hit, 'my-click-event')}"
+          >
+            Add to Cart
+          </button>
+        </div>    
       </div>
     </article>
       `,
     },
   }),
+    
   instantsearch.widgets.configure({
     hitsPerPage: 9,
   }),
