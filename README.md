@@ -28,9 +28,8 @@ npx create-instantsearch-app@latest Product-demo-app \
   --template "InstantSearch.js" \
   --app-id "B1G2GM9NG0" \
   --api-key "aadef574be1f9252bb48d4ea09b5cfe5" \
-  --index-name demo_ecommerce \
-  --attributes-to-display name \
-  --attributes-for-faceting ''
+  --index-name products-import
+
 ```
 Step 5: Pull the source code, make any updates and start the app
 
